@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script src="js/jquery-3.5.0.js"></script>
+    <script>
+        $(document).ready(() => {
+            var arr = [
+                {
+                    id:1,
+                    name:"name1",
+                    num:3
+                },
+                {
+                    id:2,
+                    name:"name2",
+                    num:4
+                },
+                {
+                    id:3,
+                    name:"name3",
+                    num:7
+                },
+                {
+                    id:4,
+                    name:"name4",
+                    num:2
+                },
+                {
+                    id:5,
+                    name:"name5",
+                    num:7
+                },
+                {
+                    id:6,
+                    name:"name6",
+                    num:8
+                },
+                {
+                    id:7,
+                    name:"name7",
+                    num:9
+                },
+                {
+                    id:8,
+                    name:"name8",
+                    num:0
+                },
+                {
+                    id:9,
+                    name:"name9",
+                    num:2
+                },
+                {
+                    id:10,
+                    name:"name10",
+                    num:5
+                },
+                {
+                    id:11,
+                    name:"name11",
+                    num:7
+                },
+                {
+                    id:12,
+                    name:"name12",
+                    num:7
+                },
+                {
+                    id:13,
+                    name:"name13",
+                    num:6
+                },
+            ] 
+
+            let numOfOdd = 0;
+            let numOfEve = 0;
+
+                arr.forEach(element => {
+                    if(element.num%2==0) {
+                        numOfEve++;
+                    }
+                    else {
+                        numOfOdd++;
+                    }
+                });
+                console.log("eveen : "+numOfEve)
+                    console.log("odd : "+numOfOdd)
+
+                if(numOfEve==numOfOdd) {
+                    console.log("tie")
+                }
+                if(numOfOdd>numOfEve) {
+                    arr.forEach(element => {
+                    if(element.num%2==0) {
+                        console.log("Winner name: "+element.name)
+                    }
+                });
+                }
+                else {
+                    arr.forEach(element => {
+                    if(element.num%2!=0) {
+                        console.log("Winner name: "+element.name)
+                    }
+                }); 
+                }
+        })
+    </script>
+</body>
+</html>

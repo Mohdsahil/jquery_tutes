@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="btn-1" >click me</button>
+    <h1 id="heading-1">this is heading one</h1>
+    
+   <script src="js.jquery-3.5.0.js"></script>
+   <script>
+
+    $(document).ready(() => {
+          
+
+        $("#btn-1").hover(fun1,fun2);
+        
+        function fun2() {
+            $('#heading-1').fadeIn();
+
+        }
+         function fun1() {
+            
+           $('#heading-1').fadeOut(); 
+        // $("selectorone,selectortwo,....").action();
+        // $("parentselector childselector").action();
+        // action peprform only in childselector
+        
+        // $("selecctor:first") action is apply only the first selector of the document;
+        //   $("selecctor:even or odd") 
+
+
+        }
+    })
+   </script>
+</body>
+</html>

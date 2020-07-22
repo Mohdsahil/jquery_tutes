@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+</head>
+<body>
+
+    <div id="myDiv">
+        <h2>jQuery UI </h2>
+        <input type="text" id="dateinput" placeholder="Choose a date">
+    </div>
+    <!-- <div>
+        <img src="jquery-ui/images/ui-icons_555555_256x240.png" id="img1" title="" alt="">
+    </div> -->
+
+    <!-- <button id="dialog-link">
+        Open Dialog Box
+    </button>
+
+
+    <!-- ui-dialog -->
+<div id="dialog" title="Dialog Title will here">
+    <h2>this is the dialog box.</h2>
+</div> 
+<hr>
+<div id="divMessage">
+    <h2>message box</h2>
+    <button id="message-btn">Show Message Box</button>
+</div>
+<hr>
+<div class="divAuto">
+    <h2>AutoComplete widgets</h2>
+<input type="text" id="citytext">
+</div>
+
+    <script src="js/jquery-3.5.0.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+
+    <script>
+
+        var cities = ["mumbai", "new delhi", "punjab", "pune", "mysore", "indore", "new york", "los angeles", "manhattan", "tokio", "new jersey"]
+        $('#citytext').autocomplete(
+            {
+                source:cities
+            },
+            {
+                autofocus: true,
+                delay: 0,
+                minLength:3
+            }
+            )
+
+
+        $('#message-btn').click(() => {
+            $('#dialog').dialog({
+                title: "Custom Message Box",
+                draggable:true,
+                height:300,
+                width:300,
+                modal:true,  // protect user to interact with UI until the dialog box is closed
+
+                
+                buttons: [
+                    {
+                        text:"Ok",
+                        icon: "ui-icon-heart",
+                        click: function() {
+                            $(this).dialog("close");
+                        }
+                    }
+                ]
+            });
+        })
+
+
+//         $( "#dialog" ).dialog({
+// 	autoOpen: false,
+// 	width: 400,
+//     height:600,
+// 	buttons: [
+// 		{
+// 			text: "send",
+// 			click: function() {
+// 				$( this ).dialog( "send" );
+// 			}
+// 		},
+// 		{
+// 			text: "Cancel",
+// 			click: function() {
+// 				$( this ).dialog( "close" );
+// 			}
+// 		}
+// 	]
+// });
+
+        // Link to open the dialog
+        // $( "#dialog-link" ).click(function( event ) {
+        //     $( "#dialog" ).dialog( "open" );
+        //     event.preventDefault();
+        // });
+
+
+
+        $('#dateinput').datepicker({
+            numberOfMonths:1,
+            changeYear:true,
+            changeMonth:true,
+            showWeek:true,
+            showOtherMonths:true,
+            minDate: new Date(2020,0,1),
+            maxDate: new Date(2025,11,31)
+        });
+
+        $('#img1').tooltip({  // this will work on mouse hover the content of the selector
+            //track:true,
+            content:"This is tooltip",
+            show:{effect:"bounce",duration:3000},
+            hide:{effect:"explode",duration:3000}
+        })
+    </script>
+</body>
+</html>

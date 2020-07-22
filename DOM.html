@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="btn1">click</button>
+    <button id="append">append</button>
+    <button id="prepend">prepend</button>
+    <button id="after">after</button>
+    <button id="before">before</button> <br><br>
+    <button id="remove">remove</button>
+    <button id="empty">empty</button>
+
+
+    <div class="myDiv1" id="div1">
+        <p id="p1">this is the first paragraph of animate div</p>
+       
+    </div>
+
+    <!-- <div class="myDiv2">
+        <p>this is the paragraph of animate div</p>
+        <p>this is the paragraph of animate div</p>
+        <p>this is the paragraph of animate div</p>
+        <p>this is the paragraph of animate div</p>
+    </div> -->
+
+    <!-- <div id="myBox">
+        BOX
+    </div> -->
+
+    <script src="js/jquery-3.5.0.js"></script>
+    <script>
+
+        $(document).ready(()=> {
+            
+            $('#append').click(()=> {
+                $('#div1').append('<p>this is second paragraph</p>')
+            })
+            $('#prepend').click(()=> {
+                $('#div1').prepend('<p>this is prepend paragraph</p>')
+            })
+            $('#after').click(()=> {
+                $('#div1').after('<p>this is after paragraph</p>')
+            })
+            $('#before').click(()=> {
+                $('#div1').before('<p>this is before paragraph</p>')
+            })
+            $('#remove').click(()=> {
+                $('p:first').remove()
+            })
+            $('#empty').click(()=> {
+                $('#div1').empty()
+            })
+
+
+
+            // $('#btn1').click(()=> {
+            //     $('.myDiv1').animate({
+            //        left:"0"            
+            //     },1000).slideUp(1000).slideDown(1000).fadeOut(1000).fadeIn(1000)
+            //     $('#myBox').animate({
+            //         left:"1000px",
+            //         height:"100px",
+            //         width:"100px",
+            //         padding:"80px"
+            //     },1000)
+            // })
+
+
+//   text(), html(), attr(), css() 
+                
+// text() => is userd to get and set the text of which it get selected (it only set or get the text)
+//           $(selector).text()-> it return the text of the selector 
+//           $(selector).text("this is the text")-> it set the text into the seletor
+// html() => is used to get and send the text with html tag to which it get selected
+//            $(selector).text()-> it return the text  with html tag if it is in there.
+//              $(selector).text("this is the text")-> it set the text into the seletor with the html tags
+// attr() => is used to access the attribute to which it get selected.  
+//           $(selector).attr("attributename")-> getttig the attribute value
+//          $(selector).attr("attributename1", "valueofatribute")-> set the value of the attribute (attributename1)
+// css() => is also same as the attr()
+
+
+//***********************************//
+
+/*
+            append()=> insert content at the end of of the selected element.
+            prepend()=> insert content at the beginning of the selected element.
+            after()=> insert content after the selected element.
+            before()=> insert content before the selected element.
+
+            remove() => remove the selected element (& its child element)
+            empty()=> remove the child element from the selected elements
+
+*/
+//******************************************//
+
+/*
+                addClass()-> Adds one or more classes to the selected elements
+                removeClass()-> remove one or more classes from the selected elements
+                toggleClass()-> Toggle between adding/removing classess from the selected elements
+                css()-> sets or return the style attribute
+*/
+            // $('#btn1').click(()=> {
+            //     $('#myBox').animate({
+            //         left:"150px",
+            //         height:"100px",
+            //         width:"100px",
+            //         padding:"80px"
+                    
+            //     },1000)
+            // })
+            
+        })
+        </script>
+        
+</body>
+</html>
